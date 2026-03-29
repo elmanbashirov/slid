@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Tracker v2</title>
+    <style>
+        :root {
+            --radius-sm: 0.2rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 1rem;
+            --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-strong: 0 2px 5px rgba(0, 0, 0, 0.2);
+            --tr-fast: 200ms;
+            --tr-base: 300ms;
+        }
+        /* Additional styling... */
+        .focus-visible:focus {
+            outline: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 aria-label="Life Tracker">Life Tracker</h1>
+    <div id="debug-panel" aria-live="polite"></div>
+    <script>
+        const debugMode = false;
+        function updateDebugToggleBtn() {
+            // Code to update debug toggle button
+        }
+        function updateDebugPanel() {
+            // Code to update the debug panel
+        }
+        function toggleDebugMode() {
+            debugMode = !debugMode;
+            updateDebugToggleBtn();
+            updateDebugPanel();
+        }
+        function localISODate(date) {
+            return date.toLocaleString('en-ISO', { timeZone: 'UTC', timeZoneName: 'short' });
+        }
+        function computeTaskDateRange(start, end) {
+            // Code for timezone handling
+        }
+        function runTaskDateRangeSelfTest() {
+            console.log(localISODate(new Date()), 'Testing with Pacific/Kiritimati and LA tests');
+            // Implement tests here
+        }
+        function _taskRenderQueued() {
+            requestAnimationFrame(() => {
+                // Code to render tasks
+            });
+        }
+        // Initialize application and event listeners here
+    </script>
+</body>
+</html>
